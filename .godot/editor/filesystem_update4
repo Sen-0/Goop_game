@@ -1,0 +1,6 @@
+res://Scenes/game.tscn
+res://Scripts/CollisionShape2D.gd
+res://goop.tscn
+res://goop_balls.tscn
+res://killzone.tscn
+res://poog.tscn

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://bybcjii3f4uc5"]
+
+[ext_resource type="Texture2D" uid="uid://u68mlpplifop" path="res://Assets/first game resources/poog.png" id="1_5iane"]
+[ext_resource type="Script" path="res://Scripts/poog.gd" id="1_t4ll3"]
+[ext_resource type="PackedScene" uid="uid://bkd4cwv37d5rx" path="res://killzone.tscn" id="2_i0gut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2sx3"]
+atlas = ExtResource("1_5iane")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jhl"]
+atlas = ExtResource("1_5iane")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77hnm"]
+atlas = ExtResource("1_5iane")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luxtv"]
+atlas = ExtResource("1_5iane")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kh2o"]
+atlas = ExtResource("1_5iane")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2bb6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2sx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4jhl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77hnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luxtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kh2o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ldkn3"]
+radius = 7.0
+
+[node name="Poog" type="Node2D"]
+script = ExtResource("1_t4ll3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_2bb6y")
+autoplay = "default"
+frame_progress = 0.223147
+
+[node name="Killzone" parent="." instance=ExtResource("2_i0gut")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_ldkn3")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -7)
+target_position = Vector2(16, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -7)
+target_position = Vector2(-15, 0)

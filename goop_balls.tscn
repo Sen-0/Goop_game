@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://rr6bnx0fh3j6"]
+
+[ext_resource type="Script" path="res://Scripts/goop_balls.gd" id="1_gvl4x"]
+[ext_resource type="Texture2D" uid="uid://brcyuk50f6igo" path="res://Assets/first game resources/goop balls.png" id="1_rhqd5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2fs6"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0hhe"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl6wu"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy6x3"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfund"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gwx6"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_530hv"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3b7u"]
+atlas = ExtResource("1_rhqd5")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wd20h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2fs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0hhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sl6wu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy6x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfund")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gwx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_530hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3b7u")
+}],
+"loop": true,
+"name": &"goop balls",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfrck"]
+radius = 11.0
+
+[node name="Goop balls" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_gvl4x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wd20h")
+animation = &"goop balls"
+autoplay = "goop balls"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bfrck")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

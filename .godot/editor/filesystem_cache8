@@ -1,0 +1,23 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715087759
+CollisionShape2D.gd::GDScript::-1::1715083279::0::1::::<>CollisionShape2D<>::
+goop.tscn::PackedScene::6091486366975343099::1715087351::0::1::::<><>::uid://cy2egtchlrqw::::res://Assets/first game resources/Goop idle.png<>res://Scripts/CollisionShape2D.gd
+goop_balls.tscn::PackedScene::1230189495712160553::1715087351::0::1::::<><>::res://Scripts/goop_balls.gd<>uid://brcyuk50f6igo::::res://Assets/first game resources/goop balls.png
+icon.svg::CompressedTexture2D::4854579761870643608::1715005040::1715005057::1::::<><>::
+killzone.tscn::PackedScene::3096267806983345193::1715087352::0::1::::<><>::res://Scripts/killzone.gd
+poog.tscn::PackedScene::4073155248715888106::1715087352::0::1::::<><>::uid://u68mlpplifop::::res://Assets/first game resources/poog.png<>res://Scripts/poog.gd<>uid://bkd4cwv37d5rx::::res://killzone.tscn
+::res://Assets/::1715086339
+::res://Assets/first game resources/::1715086350
+goop balls.png::CompressedTexture2D::3585253277473693282::1715082409::1715086350::1::::<><>::
+Goop idle.png::CompressedTexture2D::191569599945876034::1715077839::1715086350::1::::<><>::
+goop jump.png::CompressedTexture2D::2443654652554554351::1715078589::1715086350::1::::<><>::
+goop walk.png::CompressedTexture2D::1283992305408937228::1715078300::1715086350::1::::<><>::
+poog.png::CompressedTexture2D::1469798275050122383::1715086226::1715086350::1::::<><>::
+world blocks.png::CompressedTexture2D::5848844994488908159::1715082092::1715086350::1::::<><>::
+::res://Scenes/::1715087351
+game.tscn::PackedScene::1994485017358094887::1715087351::0::1::::<><>::uid://cplhvfwakj0yd::::res://Assets/first game resources/world blocks.png<>uid://cs105jnxs05sx::::res://goop.tscn<>uid://rr6bnx0fh3j6::::res://goop_balls.tscn<>uid://bkd4cwv37d5rx::::res://killzone.tscn<>uid://bybcjii3f4uc5::::res://poog.tscn
+::res://Scripts/::1715087351
+CollisionShape2D.gd::GDScript::-1::1715085760::0::1::::<>CharacterBody2D<>::
+goop_balls.gd::GDScript::-1::1715085210::0::1::::<>Area2D<>::
+killzone.gd::GDScript::-1::1715087351::0::1::::<>Area2D<>::
+poog.gd::GDScript::-1::1715087189::0::1::::<>Node2D<>::
